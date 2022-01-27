@@ -164,3 +164,121 @@ int main ( void ) {
     return 0;
 }
 ```
+
+### Inheritance Lab exercise
+mobile.h
+```
+
+#ifndef __MOBILE_H
+#define __MOBILE_H
+
+#include <iostream>
+using namespace std;
+
+class Mobile {
+
+private:
+    string mobileNumber;
+
+protected:
+    string protectedVariable;
+
+private:
+    string privateVariable;
+
+public:
+    Mobile();
+    Mobile( string contactNo );
+    Mobile( const Mobile& mobile );
+    ~Mobile();
+
+    virtual void makeCall ( string mobileNumber );
+};
+
+#endif
+```
+
+mobile.cpp
+```
+#include "mobile.h"
+
+//Default constructor
+Mobile::Mobile() {
+    cout << "Inside mobile constructor ..." << endl;
+}
+
+//Overloaded constructor
+Mobile::Mobile( string contactNo ) {
+    this->mobileNumber = contactNo;
+}
+
+// Copy constructor - when new object has to be created with the values of another existing existing object
+// copy constructor will be invoked
+Mobile::Mobile( const Mobile& mobile ) {
+    cout << "Inside Mobile Copy constructor invoked" << endl;
+}
+
+
+Mobile::~Mobile() {
+    cout << "Inside mobile destructor ..." << endl;
+}
+
+void Mobile::makeCall ( string mobileNumber ) {
+    cout << "Calling " << mobileNumber << " ..." << endl;
+}
+```
+
+iphone.h
+```
+#include "mobile.h"
+
+//IPhone class is extending the Mobile base class
+class IPhone : public Mobile {
+
+public:
+    IPhone();
+    ~IPhone();
+    void makeCall ( string mobileNumber );
+};
+```
+
+iphone.cpp
+```
+#include "iphone.h"
+
+IPhone::IPhone() {
+    cout << "IPhone constructor ..." << endl;
+}
+
+IPhone::~IPhone() {
+    cout << "IPhone destructor ..." << endl;
+}
+
+
+//We are overriding the base class implementation of makeCall method
+void IPhone::makeCall ( string mobileNumber ) {
+    Mobile::makeCall( mobileNumber ); //We are reusing makeCall method logic from baseclass here - optional
+    cout << "Inside IPhone makecall" << endl;
+}
+```
+
+main.cpp
+```
+#include <iostream>
+#include "iphone.h"
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    Mobile *ptrMobile = new IPhone();
+    ptrMobile->makeCall( "123-456-7890");
+
+    return 0;
+}
+```
+
+##### Compiling and running the application
+```
+g++ *.cpp
+a.exe
+```
