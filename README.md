@@ -282,3 +282,13 @@ int main(int argc, char const *argv[])
 g++ *.cpp
 a.exe
 ```
+
+# Installing Qt 5.12.x Community Edition
+If you are using Qt for non-commercial purpose, self-learning, etc, you may use this
+```
+http://iso.mirrors.ustc.edu.cn/qtproject/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe
+```
+The offline installer comes around 3.9 GB and it takes about 30 minutes to install in Windows.
+You need to make sure the bin folders of Qt 5.12.x is added to your system and/or environment path.
+
+If you have done all this, you can use Qt Creater IDE to start developing Qt applications.
