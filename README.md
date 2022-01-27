@@ -26,6 +26,8 @@ https://code.visualstudio.com/docs/cpp/config-mingw
 
 
 ### Vector Lab exercise
+Below is the code present in main.cpp source file
+
 ```
 #include <iostream>
 #include <vector>
@@ -74,4 +76,14 @@ int main ( void ) {
 
     return 0;
 }
+```
+
+##### Compiling the application
+```
+g++ main.cpp
+```
+
+##### Running the application
+```
+./a.exe
 ```
