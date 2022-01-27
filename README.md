@@ -87,3 +87,40 @@ g++ main.cpp
 ```
 ./a.exe
 ```
+
+### List lab exercise
+```
+#include <iostream>
+#include <list>
+#include <iterator>
+using namespace std;
+
+int main ( void ) {
+
+    list<int> listOfIntegers;
+
+    listOfIntegers.push_back(10);
+    listOfIntegers.push_back(5);
+    listOfIntegers.push_back(15);
+    listOfIntegers.push_back(7);
+
+    list<int>::iterator pos = listOfIntegers.begin(); 
+
+    while ( pos != listOfIntegers.end() ) {
+        cout << *pos << "\t";
+        ++pos; 
+    }
+
+    return 0;
+}
+```
+
+##### Compiling the application
+```
+g++ main.cpp
+```
+
+##### Running the application
+```
+./a.exe
+```
