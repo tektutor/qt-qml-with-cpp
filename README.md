@@ -283,6 +283,122 @@ g++ *.cpp
 a.exe
 ```
 
+### Smart Pointer Lab exercise
+father.h
+```
+#ifndef __FATHER_H
+#define __FATHER_H
+
+#include <iostream>
+#include <memory>
+#include "child.h"
+using namespace std;
+
+class Father {
+private:
+    shared_ptr<Child> child;
+    string name;
+public:
+    Father(string name=NULL) {
+        this->name = name;
+        cout << "Father constructor ..." << endl;
+    }
+
+    ~Father() {
+        cout << "Father destructor ..." << endl;
+    }
+
+    void setChild( shared_ptr<Child> child ) {
+        this->child = child;
+    }
+
+    void printProfile() {
+        cout << "Father print method ..." << endl;
+    }
+};
+
+#endif /* __FATHER_H */
+```
+
+mother.h
+```
+#ifndef __MOTHER_H
+#define __MOTHER_H
+
+#include <iostream>
+#include <memory>
+#include "child.h"
+using namespace std;
+
+class Mother {
+private:
+    shared_ptr<Child> child;
+    string name;
+public:
+    Mother(string name=NULL) {
+        this->name = name;
+        cout << "Mother constructor ..." << endl;
+    }
+
+    ~Mother() {
+        cout << "Mother destructor ..." << endl;
+    }
+
+    void setChild( shared_ptr<Child> child ) {
+        this->child = child;
+    }
+
+    void printProfile() {
+        cout << "Mother print method ..." << endl;
+    }
+};
+
+#endif /* __MOTHER_H */
+```
+
+child.h
+```
+#ifndef __CHILD_H
+#define __CHILD_H
+
+#include <iostream>
+#include <memory>
+using namespace std;
+
+class Mother;
+class Father;
+
+class Child {
+private:
+    shared_ptr<Mother> mom;
+    shared_ptr<Father> dad;
+    string name;
+public:
+    Child(string name, shared_ptr<Father> dad, shared_ptr<Mother> mom) {
+        this->name = name;
+        this->mom = mom;
+        this->dad = dad;
+        cout << "Child constructor ..." << endl;
+    }
+
+    ~Child() {
+        cout << "Child destructor ..." << endl;
+    }
+
+    void printProfile() {
+        cout << "Child print method ..." << endl;
+    }
+};
+
+#endif /* __CHILD_H */
+```
+
+##### Compiling and running the smartpointer lab exercise
+```
+g++ *.cpp
+./a.exe
+```
+
 # Installing Qt 5.12.x Community Edition
 If you are using Qt for non-commercial purpose, self-learning, etc, you may use this
 ```
@@ -292,3 +408,4 @@ The offline installer comes around 3.9 GB and it takes about 30 minutes to insta
 You need to make sure the bin folders of Qt 5.12.x is added to your system and/or environment path.
 
 If you have done all this, you can use Qt Creater IDE to start developing Qt applications.
+
