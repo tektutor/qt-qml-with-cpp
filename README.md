@@ -1,3 +1,16 @@
+
+### Installing Qt5 in Ubuntu 18.04
+```
+sudo apt-get install build-essential
+sudo apt-get install qt5-default
+sudo apt-get install qtdeclarative5-dev
+```
+
+### Installing Qt5 Creater IDE
+```
+sudo apt-get install qtcreator
+```
+
 ### Installing MingGW 64-bit in Windows 10 or later
 For detailed instructions, refer the official web page https://www.msys2.org/
 
