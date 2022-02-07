@@ -10,4 +10,6 @@ public:
 	Thread( QString );
 protected:
 	void run();
+signals:
+   void sendMessage( QString );
 };

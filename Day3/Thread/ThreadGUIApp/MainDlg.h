@@ -26,6 +26,11 @@ private slots:
   void onStartButtonClicked(); 
   void onStopButtonClicked(); 
   void onCloseButtonClicked(); 
+
+  void onTabChanged( int );
+
+  void onToggleStopButton( bool ); 
+  void onToggleStartButton( bool ); 
 public:
    MainDlg();
 };

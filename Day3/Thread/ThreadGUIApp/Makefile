@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = ThreadGUIApp1.0.0
-DISTDIR = /home/jegan/qtprojects/Day3/Thread/ThreadGUIApp/.tmp/ThreadGUIApp1.0.0
+DISTDIR = /home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp/.tmp/ThreadGUIApp1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1
 LIBS          = $(SUBLIBS) -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -374,20 +374,23 @@ moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 compiler_moc_header_make_all: moc_MainDlg.cpp moc_Thread.cpp moc_ThreadDlg.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_MainDlg.cpp moc_Thread.cpp moc_ThreadDlg.cpp
-moc_MainDlg.cpp: MainDlg.h \
+moc_MainDlg.cpp: ThreadDlg.h \
+		Thread.h \
+		MainDlg.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainDlg.h -o moc_MainDlg.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include MainDlg.h -o moc_MainDlg.cpp
 
 moc_Thread.cpp: Thread.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include Thread.h -o moc_Thread.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include Thread.h -o moc_Thread.cpp
 
-moc_ThreadDlg.cpp: ThreadDlg.h \
+moc_ThreadDlg.cpp: Thread.h \
+		ThreadDlg.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/home/jegan/qtprojects/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ThreadDlg.h -o moc_ThreadDlg.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/home/jegan/qt-qml-with-cpp/Day3/Thread/ThreadGUIApp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ThreadDlg.h -o moc_ThreadDlg.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -403,16 +406,21 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 
 ####### Compile
 
-main.o: main.cpp MainDlg.h
+main.o: main.cpp MainDlg.h \
+		ThreadDlg.h \
+		Thread.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
-MainDlg.o: MainDlg.cpp MainDlg.h
+MainDlg.o: MainDlg.cpp MainDlg.h \
+		ThreadDlg.h \
+		Thread.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MainDlg.o MainDlg.cpp
 
 Thread.o: Thread.cpp Thread.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Thread.o Thread.cpp
 
-ThreadDlg.o: ThreadDlg.cpp ThreadDlg.h
+ThreadDlg.o: ThreadDlg.cpp ThreadDlg.h \
+		Thread.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ThreadDlg.o ThreadDlg.cpp
 
 moc_MainDlg.o: moc_MainDlg.cpp 

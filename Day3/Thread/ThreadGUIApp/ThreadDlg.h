@@ -12,9 +12,19 @@ private:
 	Thread *pThread;
 	QString name;
 
+	bool isThreadStarted, isThreadStopped, isThreadRunning;
+protected slots:
+	void onMessageReceived( QString );
+
+signals:
+   void toggleStartButtonStatus(bool);
+   void toggleStopButtonStatus(bool);
+
 public:
 	ThreadDlg(QString);
 	void start();
 	void stop();
+
+	void updateButtonStatus();
 
 };
