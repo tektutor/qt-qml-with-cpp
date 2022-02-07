@@ -6,8 +6,9 @@ Thread::Thread(QString name) {
 
 void Thread::run() {
 
-    for ( int count=0; count < 30000; ++count ) {
-		qDebug() << name <<  " => " << endl;	
-	}
+	while ( 1 ) {
 
+		qDebug() << name << endl;
+	}
 }
+
