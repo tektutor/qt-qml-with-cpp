@@ -23,8 +23,6 @@ Dialog::Dialog(QWidget *parent)
 
     setLayout(pLayout);
 
-
-
 }
 
 Dialog::~Dialog()

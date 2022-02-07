@@ -3,7 +3,7 @@
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
 {
-    pLayout = new QBoxLayout(QBoxLayout::BottomToTop);
+    pLayout = new QBoxLayout(QBoxLayout::LeftToRight);
 
     pBttn1 = new QPushButton("Button 1");
     pBttn2 = new QPushButton("Button 2");

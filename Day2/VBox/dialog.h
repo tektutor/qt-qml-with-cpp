@@ -7,7 +7,7 @@
 
 class Dialog : public QDialog
 {
-    Q_OBJECT
+Q_OBJECT
 private:
     QPushButton *pBttn1, *pBttn2, *pBttn3;
     QVBoxLayout *pLayout;
