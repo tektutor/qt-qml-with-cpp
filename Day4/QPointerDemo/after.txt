@@ -1,0 +1,10 @@
+ LEAK SUMMARY:
+==35119==    definitely lost: 1,036 bytes in 9 blocks
+==35119==    indirectly lost: 14,851 bytes in 96 blocks
+==35119==      possibly lost: 3,832 bytes in 33 blocks
+==35119==    still reachable: 1,586,602 bytes in 21,139 blocks
+==35119==                       of which reachable via heuristic:
+==35119==                         length64           : 4,832 bytes in 80 blocks
+==35119==                         newarray           : 2,096 bytes in 51 blocks
+==35119==         suppressed: 0 bytes in 0 blocks
+
