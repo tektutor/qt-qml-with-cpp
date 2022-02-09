@@ -37,6 +37,30 @@ Item {
 		result.textValue= resultValue
 	}
 
+	function moveFocusToNextInput() {
+		if ( firstInput.focus == true ) {
+			console.log ( "First input has focus")
+			firstInput.focus = false;
+			secondInput.focus = true;
+		}
+		else if ( secondInput.focus == true ) {
+			console.log ( "Second input has focus")
+			firstInput.focus = true;
+			secondInput.focus = false;
+		}
+	}
+
+        Keys.onPressed: { 
+		if ( (event.key == Qt.Key_Enter) || (event.key == Qt.Key_Tab) ) {
+			console.log ( "Enter or Tab key was pressed" )
+
+			moveFocusToNextInput();
+
+		}
+
+	}
+
+
 	Rectangle  {
 		width: 495
 		height: 295
@@ -68,7 +92,7 @@ Item {
 			Row {
 				spacing: 5
 				Label { textValue: "Result" }
-				Edit { id:result; textValue: "0.0" }
+				Edit { id:result; textValue: "0.0"; isReadOnly: true }
 			}
 			
 			Row {
