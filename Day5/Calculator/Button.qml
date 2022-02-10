@@ -46,10 +46,6 @@ Rectangle {
 		else if ( calculator.operatorSelected == "/" ) {
 			calculator.resultValue = calculator.firstValue / calculator.secondValue;
 		}
-
-		console.log ( calculator.firstValue )
-		console.log ( calculator.secondValue )
-		console.log ( calculator.resultValue )
 	}
 
 	MouseArea {
@@ -61,7 +57,7 @@ Rectangle {
 			else if ( caption == "=" ) {
 				calculator.secondValue = parseFloat ( display.value );
 				computeResult( )
-				display.value = toString( calculator.resultValue )
+				display.value = calculator.resultValue.toString()
 			}
 	}
 
