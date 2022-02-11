@@ -1,0 +1,11 @@
+Today's Qt/QML Agenda
++++++++++++++++++++++
+
+1. Understanding use of Q_PROPERTY
+2. Flow Positioner
+3. Property Binding Overview
+
+Once we are done with the above, we can discuss your project specific topics
+
+We will start by 9:45 am
+    - Only 5 participants has joined so far
